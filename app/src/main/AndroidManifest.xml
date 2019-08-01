@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.gridcardview">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/all3"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".instagram">
+        </activity>
+        <activity android:name=".twiter">
+        </activity>
+        <activity android:name=".vocationalhub">
+        </activity>
+        <activity android:name=".olx">
+        </activity>
+        <activity android:name=".snapdeal">
+        </activity>
+
+
+        <activity android:name=".flipcart">
+        </activity>
+        <activity android:name=".facebook">
+        </activity>
+        <activity android:name=".Main2Activity">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
