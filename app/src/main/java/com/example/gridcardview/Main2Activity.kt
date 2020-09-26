@@ -18,7 +18,7 @@ class Main2Activity : AppCompatActivity() {
         val myWebView: WebView = findViewById(R.id.wv1)//object creation
 
 
-        myWebView.loadUrl("https://github.com/Sourav54325")//for loading url
+        myWebView.loadUrl("https://github.com")//for loading url
 
         myWebView.settings.javaScriptEnabled = true//for enabling java script to perform amimations
 

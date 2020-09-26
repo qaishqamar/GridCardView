@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Allin1</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="github">GitHub</string>
+    <string name="facebook">Facebook</string>
+    <string name="flipcart">Flipkart</string>
+    <string name="snapdeal">Snapdeal</string>
+    <string name="olx">Olx</string>
+    <string name="m_c_r">M C R</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="set_player_names">Set player names</string>
+    <string name="enter_first_player_name">Enter first player name</string>
+    <string name="enter_second_player_name">Enter second player name</string>
+    <string name="start">Start</string>
+    <string name="miles">Miles</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="miles_to_km">Miles to km</string>
+    <string name="kilometer_to_mile">kilometer to mile</string>
 </resources>

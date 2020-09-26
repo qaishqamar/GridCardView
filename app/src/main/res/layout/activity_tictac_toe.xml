@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TictacToe">
+
+    <RelativeLayout
+            android:id="@+id/set_player_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/set_player_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="68dp"
+                android:padding="5dp"
+                android:text="@string/set_player_names"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        <EditText
+                android:id="@+id/firstplayer_et"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/set_player_tv"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="@string/enter_first_player_name"
+                android:inputType="textPersonName"
+                android:padding="5dp" />
+
+        <EditText
+                android:id="@+id/secondplayer_et"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/firstplayer_et"
+                android:layout_alignStart="@+id/firstplayer_et"
+                android:layout_alignEnd="@+id/firstplayer_et"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="2dp"
+                android:ems="10"
+                android:hint="@string/enter_second_player_name"
+                android:inputType="textPersonName" />
+
+        <Button
+                android:id="@+id/start_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondplayer_et"
+                android:layout_alignStart="@+id/secondplayer_et"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="43dp"
+                android:text="@string/start" />
+    </RelativeLayout>
+
+
+<!--    for game screen-->
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColorgrid"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/games_layout"
+            >
+
+        <!--      showing winnner reesult screen-->
+        <LinearLayout
+                android:id="@+id/winner_layout"
+                android:layout_width="409dp"
+                android:layout_height="726dp"
+                android:background="@android:color/black"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+
+            <TextView
+                    android:id="@+id/winner_name_tv"
+                    android:layout_width="175dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="150dp"
+                    android:text="match draw"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <ImageView
+                    android:id="@+id/win_pic"
+                    android:layout_width="379dp"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@android:color/black"
+                    android:src="@drawable/winner_pic">
+
+            </ImageView>
+
+            <Button
+                    android:id="@+id/play_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="play again"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <!--        actual  game design-->
+
+
+        <LinearLayout
+                android:id="@+id/first_row"
+                android:layout_width="315dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="148dp"
+                android:layout_marginEnd="30dp"
+                android:weightSum="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                    android:id="@+id/first_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:background="@android:color/white"
+                    android:onClick="selectButton"
+                    android:textSize="20dp" />
+
+            <Button
+                    android:id="@+id/second_button"
+                    android:layout_width="0dp"
+                    android:onClick="selectButton"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+            <Button
+                    android:id="@+id/third_button"
+                    android:layout_width="0dp"
+                    android:onClick="selectButton"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/second_row"
+                android:layout_width="315dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="30dp"
+                android:weightSum="9"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_row">
+
+            <Button
+                    android:id="@+id/fourth_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+            <Button
+                    android:id="@+id/fifth_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+            <Button
+                    android:id="@+id/sixth_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/third_row"
+                android:layout_width="315dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="30dp"
+                android:weightSum="9"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_row">
+
+            <Button
+                    android:id="@+id/seventh_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+            <Button
+                    android:id="@+id/eighth_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+            <Button
+                    android:id="@+id/nineth_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:onClick="selectButton"
+                    android:textSize="20dp"
+                    android:background="@android:color/white"/>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

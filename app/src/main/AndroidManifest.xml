@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.gridcardview">
+        package="com.example.gridcardview">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:allowBackup="true"
@@ -11,29 +11,21 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".instagram">
-        </activity>
-        <activity android:name=".twiter">
-        </activity>
-        <activity android:name=".vocationalhub">
-        </activity>
-        <activity android:name=".olx">
-        </activity>
-        <activity android:name=".snapdeal">
-        </activity>
-
-
-        <activity android:name=".flipcart">
-        </activity>
-        <activity android:name=".facebook">
-        </activity>
-        <activity android:name=".Main2Activity">
-        </activity>
+        <activity android:name=".KmMile"></activity>
+        <activity android:name=".TictacToe" />
+        <activity android:name=".instagram" />
+        <activity android:name=".twiter" />
+        <activity android:name=".vocationalhub" />
+        <activity android:name=".olx" />
+        <activity android:name=".snapdeal" />
+        <activity android:name=".flipcart" />
+        <activity android:name=".facebook" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

@@ -5,8 +5,67 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-    <ScrollView
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+    <RelativeLayout
+            android:id="@+id/games_list_layout"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tic_tac_toe"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/tic_tac_toe"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+
+        <TextView
+                android:id="@+id/tictac_text"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tic_tac_toe"
+                android:layout_alignStart="@+id/tic_tac_toe"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tic_tac_toe"
+                android:textColor="@android:color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/unit_convert"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="61dp"
+                android:layout_marginLeft="61dp"
+                android:layout_toEndOf="@+id/tic_tac_toe"
+                android:layout_toRightOf="@+id/tic_tac_toe"
+                android:src="@drawable/unitconvert_icon"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+        <TextView
+                android:id="@+id/unitconvert_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unit_convert"
+                android:layout_alignStart="@+id/unit_convert"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/unit_converter"
+                android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrol_web_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -17,22 +76,41 @@
                 android:layout_height="match_parent"
                 android:columnCount="2"
                 android:rowCount="3"
-                android:background="@android:color/background_light"
+                android:background="@color/backgroundColorgrid"
         >
             <android.support.v7.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:id="@+id/cv1"
-
                     app:cardElevation="15dp"
                     app:cardCornerRadius="20dp"
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
-                <ImageView android:layout_width="145dp"
-                           android:layout_height="145dp"
-                           android:src="@drawable/githublogo"
-                />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="63dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/githublogo"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp" />
+
+                <TextView
+                        android:id="@+id/git_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/github" />
+
+
 
 
             </android.support.v7.widget.CardView>
@@ -47,10 +125,28 @@
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
-                <ImageView android:layout_width="145dp"
-                           android:layout_height="145dp"
-                           android:src="@drawable/fblogo"
-                />
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fblogo"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        />
+                <TextView
+                        android:id="@+id/fb_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/facebook" />
+
+
 
 
             </android.support.v7.widget.CardView>
@@ -64,10 +160,27 @@
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
-                <ImageView android:layout_width="145dp"
-                           android:layout_height="145dp"
-                           android:src="@drawable/flipcartlogo"
-                />
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/flipcartlogo"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        />
+                <TextView
+                        android:id="@+id/flip_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/flipcart" />
+
 
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
@@ -79,10 +192,27 @@
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
-                <ImageView android:layout_width="145dp"
-                           android:layout_height="145dp"
-                           android:src="@drawable/snapdeallogo"
-                />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/snapdeal_icon"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp" />
+                <TextView
+                        android:id="@+id/snap_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/snapdeal" />
 
 
             </android.support.v7.widget.CardView>
@@ -95,10 +225,32 @@
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
+
                 <ImageView android:layout_width="145dp"
                            android:layout_height="145dp"
-                           android:src="@drawable/olxlogo"
+
                 />
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/olx_logo"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        />
+
+                <TextView
+                        android:id="@+id/olx_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="@string/olx"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
 
             </android.support.v7.widget.CardView>
@@ -113,8 +265,28 @@
                     android:foreground="?android:attr/selectableItemBackground">
                 <ImageView android:layout_width="145dp"
                            android:layout_height="145dp"
-                           android:src="@drawable/marwarilogo"
+
                 />
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        android:src="@drawable/marwarilogo"
+                        />
+                <TextView
+                        android:id="@+id/mcr_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/m_c_r" />
 
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
@@ -126,10 +298,28 @@
                     android:clickable="true"
                     android:layout_margin="15dp"
                     android:foreground="?android:attr/selectableItemBackground">
-                <ImageView android:layout_width="145dp"
-                           android:layout_height="145dp"
-                           android:src="@drawable/twiterlogo"
-                />
+
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        android:src="@drawable/twiterlogo"
+                        />
+                <TextView
+                        android:id="@+id/twit_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/twitter" />
+
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                     android:layout_width="150dp"
@@ -144,6 +334,20 @@
                            android:layout_height="145dp"
                            android:src="@drawable/instagramlogo"
                 />
+                <TextView
+                        android:id="@+id/insta_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/instagram" />
+
 
             </android.support.v7.widget.CardView>
         </GridLayout>

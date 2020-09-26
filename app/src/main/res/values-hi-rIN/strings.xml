@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Allin1</string>
+    <string name="tic_tac_toe">टिक टैक् टो</string>
+    <string name="unit_converter">इकाई कनवर्टर</string>
+    <string name="github">गीटहब</string>
+    <string name="facebook">फेसबुक</string>
+    <string name="flipcart">फ्लिपकाट</string>
+    <string name="snapdeal">स्नेपडील</string>
+    <string name="olx">ओ ल क्स</string>
+    <string name="m_c_r">"एम सी आर "</string>
+    <string name="twitter">"ट्वीटर "</string>
+    <string name="instagram">"इनस्टाग्राम "</string>
+    <string name="miles_to_km">"मील से किलोमीटर "</string>
+    <string name="kilometer_to_mile">किलोमीटर से मील</string>
+    <string name="set_player_names">खिलाड़ी का नाम सेट करें</string>
+    <string name="enter_first_player_name">पहले खिलाड़ी का नाम दर्ज करें</string>
+    <string name="enter_second_player_name">दूसरा खिलाड़ी नाम दर्ज करें</string>
+    <string name="miles">मील</string>
+    <string name="start">शुरू</string>
+    <string name="kilometer">"किलोमीटर "</string>
+</resources>

@@ -17,17 +17,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        tic_tac_toe.setOnClickListener {
+            val intent=Intent(this@MainActivity,TictacToe::class.java)
+            startActivity(intent)
+        }
+        unit_convert.setOnClickListener {
+            val intent=Intent(this,KmMile::class.java)
+            startActivity(intent)
+        }
+
         cv1.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, Main2Activity::class.java)
+
+           val i = Intent(this@MainActivity, Main2Activity::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
         }
 
         cv2.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, facebook::class.java)
+
+           val i = Intent(this@MainActivity, facebook::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
@@ -35,36 +44,36 @@ class MainActivity : AppCompatActivity() {
 
 
         cv4.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, snapdeal::class.java)
+
+           val i = Intent(this@MainActivity, snapdeal::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
         }
         cv5.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, olx::class.java)
+
+           val i = Intent(this@MainActivity, olx::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
         }
         cv6.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, vocationalhub::class.java)
+
+          val i = Intent(this@MainActivity, vocationalhub::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
         }
         cv7.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, twiter::class.java)
+
+           val i = Intent(this@MainActivity, twiter::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
         }
         cv8.setOnClickListener {
-            var i = intent
-            i = Intent(this@MainActivity, instagram::class.java)
+
+           val i = Intent(this@MainActivity, instagram::class.java)
             i.putExtra("abc", "123".toString())
             startActivity(i)
 
